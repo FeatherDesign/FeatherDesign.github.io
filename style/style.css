@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#mainContent {
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+
+	background-image: url(../Materials/white-bg.png);
+	background-repeat: no-repeat;
+	background-position: right;
+
+}
+#rightContent {
+	width: 50vw;
+	height: 100vh;
+}
+.feather-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.feather-container img.feather-item {
+	display: flex;
+	align-items: center;
+	mix-blend-mode: screen;
+	width: 300px;
+	margin: 0;
+	z-index: 3;
+}
+.feather-container img.feather-shadow {
+	position: absolute;
+	width: 300px;
+	z-index: 2;
+	margin-right: -2px;
+	margin-bottom: -5px;
+}
+.feather-container img.feather-particles {
+	position: absolute;
+}
+
+#leftContent {
+	width: 60%;
+	clip-path: polygon(0 0, 0 100%, 80% 100%, 100% 0);
+	
+	background-color: #141414;
+}
+.left-Container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 78%;
+	padding-top: 7em;
+}
+.left-Container h2.caption {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	margin-left: -6%;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 94px; 
+	letter-spacing: 15px;
+	font-variant: small-caps;
+	color: #fff;
+}
+.left-Container h2.caption span.F {
+	font-family: 'Open Sans'; 
+	font-weight: 800;
+	letter-spacing: 20px;
+	opacity: .8;
+}
+.left-Container h2.caption span.other {
+	opacity: .65;
+}
+.left-Container p.info {
+	display: flex;
+	align-items: flex-start;
+	color: #fff;
+	font-family: "MyriadProRegular";
+	letter-spacing: 2.6px;
+	font-size: 26px;
+	font-weight: 400;
+	opacity: .8;
+}
+
+
+@media screen (max-width: 1500px) {
+	#mainContent {
+		background-position-x: 40%;
+	}
+}
