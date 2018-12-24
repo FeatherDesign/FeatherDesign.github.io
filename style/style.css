@@ -143,6 +143,7 @@ body {
 		clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0%);
 	}
 	h2.caption {
+		margin: 0;
 		margin-left: 3%;
 	}
 }
@@ -154,6 +155,16 @@ body {
 @media screen and (max-width: 500px) {
 	#rightContent {
 		background-size: 170%;
+		height: 60vh;
+	}
+	.feather-container {
+		zoom: 0.7;
+	}
+	.left-Container {
+		-webkit-transform: scale(.7);
+		-ms-transform: scale(.7);
+		-o-transform: scale(.7);
+		transform: scale(.7); 
 	}
 }
 @media screen and (max-width: 400px) {
