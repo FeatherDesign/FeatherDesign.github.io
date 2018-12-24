@@ -3,16 +3,13 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-html {
-	width: 100vw;
-}
 body {
-	width: 100vw;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 }
 #mainContent {
+	overflow: hidden;
 	position: relative;
 	display: flex;
 	flex-direction: row-reverse;
@@ -120,7 +117,7 @@ body {
 
 @media screen and (max-width: 1100px) {
 	body {
-		overflow: hidden;
+		overflow: auto;
 	}
 	#mainContent {
 		display: flex;
@@ -130,7 +127,7 @@ body {
 	#rightContent {
 		z-index: 1;
 		width: 100vw;
-		height: 60vh;
+		height: 70vh;
 
 		background-image: url(../Materials/bg-white-phone-version.jpg);
 		background-repeat: no-repeat;
@@ -144,6 +141,9 @@ body {
 		width: 100vw;
 		height: 50vh;
 		clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0%);
+	}
+	h2.caption {
+		margin-left: 3%;
 	}
 }
 @media screen and (max-width: 700px) {
