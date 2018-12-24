@@ -125,7 +125,6 @@ body {
 		background-image: none;
 	}
 	#rightContent {
-		z-index: 1;
 		width: 100vw;
 		height: 70vh;
 
@@ -137,7 +136,6 @@ body {
 	}
 	#leftContent {
 		margin-top: -8vh;
-		z-index: 3;
 		width: 100vw;
 		height: 50vh;
 		clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0%);
@@ -167,14 +165,39 @@ body {
 		transform: scale(.7); 
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) and (max-width: 1100px)  {
 	#rightContent {
 		background-size: 240%;
 	}
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 280px) and (max-width: 1100px) {
 	#rightContent {
 		background-size: 340%;
+	}
+}
+
+@media screen and (max-height: 750px) and (max-width: 1100px) {
+	#leftContent {
+		height: 80vh;
+		margin-top: -12vh;
+	}
+}
+@media screen and (max-height: 650px) and (max-width: 1100px) {
+	#rightContent {
+		height: 80vh;
+	}
+}
+@media screen and (max-height: 520px) and (max-width: 1100px) {
+	.feather-container {
+		zoom: 0.6;
+	}
+	#rightContent {
+		height: 100vh;
+	}
+}
+@media screen and (max-height: 400px) and (max-width: 1100px) {
+	.feather-container {
+		zoom: 0.4;
 	}
 }
 
