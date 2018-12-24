@@ -3,7 +3,11 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+html {
+	width: 100vw;
+}
 body {
+	width: 100vw;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -14,10 +18,11 @@ body {
 	flex-direction: row-reverse;
 	justify-content: space-between;
 
-	background-image: url(../Materials/white-bg.png);
+	background-image: url(../Materials/bg-white-phone-version.jpg);
 	background-repeat: no-repeat;
 	background-position: right;
-
+	-webkit-background-size: 100%;
+	background-size: 100%;
 }
 #rightContent {
 	width: 50vw;
@@ -93,9 +98,72 @@ body {
 	opacity: .8;
 }
 
+@keyframes feather-item {
+	from { transform: translateY(-4%) rotate(3deg);}
+	50% { transform: translateY(4%) rotate(-3deg);}
+	to { transform: translateY(-4%) rotate(3deg);}
+}
 
-@media screen (max-width: 1500px) {
+.feather-item {
+	animation: feather-item 15s ease-in-out infinite;
+}
+@keyframes feather-shadow {
+	from { transform: translateY(-4%) rotate(3deg);}
+	50% { transform: translateY(4%) rotate(-3deg);}
+	to { transform: translateY(-4%) rotate(3deg);}
+}
+
+.feather-shadow {
+	animation: feather-shadow 15s ease-in-out infinite;
+}
+
+
+@media screen and (max-width: 1100px) {
+	body {
+		overflow: hidden;
+	}
 	#mainContent {
-		background-position-x: 40%;
+		display: flex;
+		flex-direction: column;
+		background-image: none;
+	}
+	#rightContent {
+		z-index: 1;
+		width: 100vw;
+		height: 60vh;
+
+		background-image: url(../Materials/bg-white-phone-version.jpg);
+		background-repeat: no-repeat;
+		background-position: top;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+	#leftContent {
+		margin-top: -8vh;
+		z-index: 3;
+		width: 100vw;
+		height: 50vh;
+		clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0%);
 	}
 }
+@media screen and (max-width: 700px) {
+	#rightContent {
+		background-size: 135%;
+	}
+}
+@media screen and (max-width: 500px) {
+	#rightContent {
+		background-size: 170%;
+	}
+}
+@media screen and (max-width: 400px) {
+	#rightContent {
+		background-size: 240%;
+	}
+}
+@media screen and (max-width: 280px) {
+	#rightContent {
+		background-size: 340%;
+	}
+}
+
