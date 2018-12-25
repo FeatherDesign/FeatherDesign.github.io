@@ -63,27 +63,55 @@ body {
 	padding-top: 7em;
 }
 .left-Container h2.caption {
+	position: relative;
 	display: flex;
 	align-items: center;
+	flex-wrap: nowrap;
 	justify-content: center;
 	margin: 0;
 	margin-left: -6%;
 	font-family: 'Open Sans';
 	font-weight: 300;
 	font-size: 94px; 
-	letter-spacing: 15px;
+
 	font-variant: small-caps;
 	color: #fff;
+}
+.left-Container h2.caption .other {
+	display: flex;
+	flex-wrap: nowrap;
+}
+.left-Container h2.caption .other span {
+	margin-right: 13px;
+}
+h2.caption {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 .left-Container h2.caption span.F {
 	font-family: 'Open Sans'; 
 	font-weight: 800;
 	letter-spacing: 20px;
 	opacity: .8;
+
+	cursor: pointer;
+	transition: all .2s;
+}
+h2.caption span.F:hover {
+	opacity: 1;
 }
 .left-Container h2.caption span.other {
 	opacity: .65;
 }
+.left-Container h2.caption span.other span {
+	
+}
+
 .left-Container p.info {
 	display: flex;
 	align-items: flex-start;
@@ -142,17 +170,18 @@ body {
 	}
 	h2.caption {
 		margin: 0;
-		margin-left: 3%;
+		margin-right: : -9%;
 	}
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 780px) {
 	#rightContent {
 		background-size: 135%;
 	}
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 580px) {
 	#rightContent {
-		background-size: 170%;
+		background-size: 200%;
 		height: 60vh;
 	}
 	.feather-container {
@@ -165,12 +194,12 @@ body {
 		transform: scale(.7); 
 	}
 }
-@media screen and (max-width: 400px) and (max-width: 1100px)  {
+@media screen and (max-width: 400px) {
 	#rightContent {
 		background-size: 240%;
 	}
 }
-@media screen and (max-width: 280px) and (max-width: 1100px) {
+@media screen and (max-width: 280px) {
 	#rightContent {
 		background-size: 340%;
 	}
