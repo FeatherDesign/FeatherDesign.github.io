@@ -172,31 +172,17 @@ h2.caption span.F:hover {
 	}
 	h2.caption {
 		margin: 0;
-		margin-right: : -9%;
+
 	}
 }
 
-}
 
-@media screen and (max-width: 580px) {
-	#rightContent {
-		height: 60vh;
+@media screen and (max-height: 850px) and (max-width: 1100px) {
+	#leftContent {
+		margin-top: -12vh;
 	}
 	.feather-container {
-		zoom: 0.7;
-	}
-	.left-Container {
-		-webkit-transform: scale(.7);
-		-ms-transform: scale(.7);
-		-o-transform: scale(.7);
-		transform: scale(.7); 
-	}
-}
-
-@media screen and (max-height: 750px) and (max-width: 1100px) {
-	#leftContent {
-		height: 80vh;
-		margin-top: -12vh;
+		zoom: 0.8;
 	}
 }
 @media screen and (max-height: 650px) and (max-width: 1100px) {
@@ -206,7 +192,7 @@ h2.caption span.F:hover {
 }
 @media screen and (max-height: 520px) and (max-width: 1100px) {
 	.feather-container {
-		zoom: 0.6;
+		zoom: 0.8;
 	}
 	#rightContent {
 		height: 100vh;
@@ -214,9 +200,34 @@ h2.caption span.F:hover {
 }
 @media screen and (max-height: 400px) and (max-width: 1100px) {
 	.feather-container {
-		zoom: 0.4;
+		zoom: 0.7;
 	}
 }
+
+
+@media screen and (max-width: 650px) {
+	.left-Container {
+		zoom: .9;
+	}
+	.feather-container {
+		zoom: 0.8;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.left-Container {
+		zoom: .7;
+	}
+}
+@media screen and (max-width: 500px) {
+	.left-Container {
+		zoom: .6;
+	}
+	.feather-container {
+		zoom: 0.7;
+	}
+}
+
 
 
 
