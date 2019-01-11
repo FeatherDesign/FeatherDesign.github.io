@@ -8,6 +8,10 @@ body {
 	padding: 0;
 	overflow: hidden;
 }
+.previewIMG {
+	position: absolute;
+	display: none;
+}
 #mainContent {
 	overflow: hidden;
 	position: relative;
