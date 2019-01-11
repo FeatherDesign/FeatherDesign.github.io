@@ -61,6 +61,7 @@ $('span.F').click(function(){
 });
 
 var timeout = 1
+var timeout2 = 2500
 $('span.F').click(function(){
 	
 	if (timeout == 1) {
@@ -68,7 +69,7 @@ $('span.F').click(function(){
 	} else if (timeout == 0) {
 		timeout = 1;
 	}
-	console.log(timeout);
+	console.log('changed, yes, stop poking');
 });
 
 const phrases = [
@@ -85,7 +86,7 @@ const fx = new TextScramble(el)
 let counter = 0
 const next = () => {
   fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 2500)
+    setTimeout(next, timeout2)
   })
   counter = (counter + timeout) % phrases.length
 }
