@@ -94,4 +94,51 @@ const next = () => {
 next()
 
 
+$('.arrowSwitcher').click(function(){
+
+	$('.feather-container').toggleClass('feather-container_active');
+
+
+	if ($('#leftContent').hasClass('leftContent_active')) {
+		$('#rightContent').removeClass('rightContent_active');
+		$('#rightContent').toggleClass('rightContent_activeOut');
+		$('#leftContent').removeClass('leftContent_active');
+		$('#leftContent').toggleClass('leftContent_activeOut');
+
+		$('.feather-item').removeClass('feather-item_active');
+		$('.feather-item').toggleClass('feather-item_activeOut');
+		$('.feather-shadow').removeClass('feather-shadow_active');
+		$('.feather-shadow').toggleClass('feather-shadow_activeOut');
+		$('.feather-particles').removeClass('feather-particles_active');
+		$('.feather-particles').toggleClass('feather-particles_activeOut');
+
+		$('.text').removeClass('text_active');
+		$('.text').toggleClass('text_activeOut');
+		$('.caption').removeClass('caption_active');
+		$('.caption').toggleClass('caption_activeOut');
+		$('.arrowSwitcher').removeClass('arrowSwitcher_active');
+		$('.arrowSwitcher').toggleClass('arrowSwitcher_activeOut');
+
+	} else {
+		$('#rightContent').toggleClass('rightContent_active');
+		$('#rightContent').removeClass('rightContent_activeOut');
+		$('#leftContent').toggleClass('leftContent_active');
+		$('#leftContent').removeClass('leftContent_activeOut');
+
+		$('.feather-item').toggleClass('feather-item_active');
+		$('.feather-item').removeClass('feather-item_activeOut');
+		$('.feather-shadow').toggleClass('feather-shadow_active');
+		$('.feather-shadow').removeClass('feather-shadow_activeOut');
+		$('.feather-particles').toggleClass('feather-particles_active');
+		$('.feather-particles').removeClass('feather-particles_activeOut');
+
+		$('.text').toggleClass('text_active');
+		$('.text').removeClass('text_activeOut');
+		$('.caption').toggleClass('caption_active');
+		$('.caption').removeClass('caption_activeOut');
+		$('.arrowSwitcher').toggleClass('arrowSwitcher_active');
+		$('.arrowSwitcher').removeClass('arrowSwitcher_activeOut');
+	}
+});
+
 

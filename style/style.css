@@ -26,8 +26,8 @@ body {
 	background-size: cover;
 
 }
-#rightContent {
-	width: 50vw;
+.rightContent {
+	width: 50%;
 	height: 100vh;
 
 }
@@ -56,10 +56,10 @@ body {
 	position: absolute;
 }
 
-#leftContent {
+.leftContent {
 	width: 60%;
 	clip-path: polygon(0 0, 0 100%, 80% 100%, 100% 0);
-	
+	animation: all .4s;
 	background-color: #141414;
 }
 .left-Container {
@@ -145,9 +145,6 @@ h2.caption span.F:active {
 	line-height: 20px;
 
 }
-
-
-
 .left-Container p.text {
 	display: flex;
 	align-items: flex-start;
@@ -159,23 +156,142 @@ h2.caption span.F:active {
 	opacity: .8;
 }
 
-@keyframes feather-item {
-	from { transform: translateY(-4%) rotate(3deg);}
-	50% { transform: translateY(4%) rotate(-3deg);}
-	to { transform: translateY(-4%) rotate(3deg);}
-}
-
-.feather-item {
-	animation: feather-item 15s ease-in-out infinite;
-}
-@keyframes feather-shadow {
-	from { transform: translateY(-4%) rotate(3deg);}
-	50% { transform: translateY(4%) rotate(-3deg);}
-	to { transform: translateY(-4%) rotate(3deg);}
-}
-
+.feather-item,
 .feather-shadow {
-	animation: feather-shadow 15s ease-in-out infinite;
+	animation: feather-animation 15s ease-in-out infinite;
+}
+@keyframes feather-animation {
+	from { transform: translateY(-4%) rotate(3deg);}
+	50% { transform: translateY(4%) rotate(-3deg);}
+	to { transform: translateY(-4%) rotate(3deg);}
+}
+
+.arrowSwitcher {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	left: 1.5%;
+	top: calc(50% - 4.25%);
+	width: 3.7em;
+	opacity: .7;
+	cursor: pointer;
+	padding: 10px;
+	
+}
+.arrowSwitcher:hover {
+	animation: all .3s;
+	opacity: 1;
+	/*text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);*/
+}
+
+.leftContent_active {
+	width: 100%;
+	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+	animation: leftContentTransition .6s;
+}
+.leftContent_activeOut {
+	animation: leftContentTransitionOut .6s;
+}
+@keyframes  leftContentTransitionOut {
+	from { width: 100%; clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);}
+	to { width: 60%; clip-path: polygon(0 0, 0 100%, 80% 100%, 100% 0);}
+}
+@keyframes  leftContentTransition {
+	from { width: 60%; clip-path: polygon(0 0, 0 100%, 80% 100%, 100% 0);}
+	to { width: 100%; clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);}
+}
+.rightContent_active {
+	animation: rightContentTransition .6s;
+	width: 0%;
+}
+.rightContent_activeOut {
+	width: 50%;
+	animation: rightContentTransitionOut .6s;
+}
+@keyframes  rightContentTransition {
+	from {width: 50%;}
+	to {width: 0%;}
+}
+@keyframes  rightContentTransitionOut {
+	from {width: 0%;}
+	to {width: 50%;}
+}
+
+.feather-item,
+.feather-shadow,
+.feather-particles,
+.text {
+	opacity: 1;
+}
+.feather-item_active,
+.feather-shadow_active,
+.feather-particles_active {
+	animation: featherTransition 1.2s;
+	transform: translateX(70%);
+	opacity: 0;
+}
+@keyframes  featherTransition {
+	from { transform: translateX(0); opacity: 1;}
+	to { transform: translateX(70%); opacity: 0;}
+}
+.feather-item_activeOut,
+.feather-shadow_activeOut,
+.feather-particles_activeOut {
+	animation: featherTransitionOut .8s;
+	transform: translateX(0);
+	opacity: 1;
+}
+@keyframes  featherTransitionOut {
+	from {transform: translateX(70%); opacity: 0;}
+	to {transform: translateX(0); opacity: 1;}
+}
+
+.text_active {
+	transform: translateX(10%);
+	opacity: 0 !important;
+	animation: textTransition .6s;
+}
+@keyframes  textTransition {
+	from { transform: translateX(0); opacity: 1;}
+	to { transform: translateX(10%); opacity: 0;}
+}
+.text_activeOut {
+	transform: translateX(0);
+	opacity: 1 !important;
+	animation: textTransitionOut .6s;
+}
+@keyframes textTransitionOut {
+	from { transform: translateX(10%); opacity: 0;}
+	to { transform: translateX(0); opacity: 1;}
+}
+
+.caption_active {
+	margin-top: -8% !important;
+	transform: scale(.7);
+	animation: captionTransition .6s;
+}
+@keyframes captionTransition {
+	from { margin-top: 0; transform: scale(1);}
+	to { margin-top: -8%; transform: scale(.7);}
+}
+.caption_activeOut {
+	margin-top: 0 !important;
+	transform: scale(1);
+	animation: captionTransitionOut .6s;
+}
+@keyframes captionTransitionOut {
+	from { margin-top: -8%; transform: scale(.7);}
+	to { margin-top: 0; transform: scale(1);}
+}
+
+.arrowSwitcher_active {
+	transform: rotate(180deg);
+	animation: arrowSwitcherTransition .6s;
+}
+@keyframes arrowSwitcherTransition {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(180deg);}
 }
 
 
@@ -215,7 +331,6 @@ h2.caption span.F:active {
 	opacity: 1;
 	}
 }
-
 
 @media screen and (max-height: 850px) and (max-width: 1100px) {
 	#leftContent {
