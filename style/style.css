@@ -10,7 +10,7 @@ body {
 }
 .previewIMG {
 	position: absolute;
-	display: none;
+	opacity: 0;
 }
 #mainContent {
 	overflow: hidden;
