@@ -118,6 +118,8 @@ $('.arrowSwitcher').click(function(){
 		$('.caption').toggleClass('caption_activeOut');
 		$('.arrowSwitcher').removeClass('arrowSwitcher_active');
 		$('.arrowSwitcher').toggleClass('arrowSwitcher_activeOut');
+		$('.left-Container').removeClass('left-Container_active');
+		$('.left-Container').toggleClass('left-Container_activeOut');
 
 	} else {
 		$('#rightContent').toggleClass('rightContent_active');
@@ -138,6 +140,8 @@ $('.arrowSwitcher').click(function(){
 		$('.caption').removeClass('caption_activeOut');
 		$('.arrowSwitcher').toggleClass('arrowSwitcher_active');
 		$('.arrowSwitcher').removeClass('arrowSwitcher_activeOut');
+		$('.left-Container').toggleClass('left-Container_active');
+		$('.left-Container').removeClass('left-Container_activeOut');
 	}
 });
 
