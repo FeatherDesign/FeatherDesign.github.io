@@ -79,6 +79,7 @@ body {
 	font-family: 'Open Sans';
 	font-weight: 300;
 	font-size: 94px; 
+	z-index: 4;
 
 	font-variant: small-caps;
 	color: #fff;
@@ -153,7 +154,7 @@ h2.caption span.F:active {
 	letter-spacing: 2.6px;
 	font-size: 22px;
 	font-weight: 400;
-	opacity: .8;
+	opacity: .5;
 }
 
 .feather-item,
@@ -177,6 +178,7 @@ h2.caption span.F:active {
 	opacity: .7;
 	cursor: pointer;
 	padding: 10px;
+	z-index: 5;
 	
 }
 .arrowSwitcher:hover {
@@ -237,7 +239,7 @@ h2.caption span.F:active {
 .feather-item_activeOut,
 .feather-shadow_activeOut,
 .feather-particles_activeOut {
-	animation: featherTransitionOut .8s;
+	animation: featherTransitionOut .6s;
 	transform: translateX(0);
 	opacity: 1;
 }
@@ -252,17 +254,17 @@ h2.caption span.F:active {
 	animation: textTransition .6s;
 }
 @keyframes  textTransition {
-	from { transform: translateX(0); opacity: 1;}
+	from { transform: translateX(0); opacity: .5;}
 	to { transform: translateX(10%); opacity: 0;}
 }
 .text_activeOut {
 	transform: translateX(0);
-	opacity: 1 !important;
+	opacity: .5 !important;
 	animation: textTransitionOut .6s;
 }
 @keyframes textTransitionOut {
 	from { transform: translateX(10%); opacity: 0;}
-	to { transform: translateX(0); opacity: 1;}
+	to { transform: translateX(0); opacity: .5;}
 }
 
 .caption_active {
@@ -306,7 +308,7 @@ h2.caption span.F:active {
 }
 
 .arrowSwitcher_active {
-	animation: arrowSwitcherTransition .3s;
+	animation: arrowSwitcherTransition .4s;
 	transform: scaleX(-1);
 	
 }
@@ -315,7 +317,7 @@ h2.caption span.F:active {
 	to {transform: scaleX(-1);}
 }
 .arrowSwitcher_activeOut {
-	animation: arrowSwitcherTransitionOut .3s;
+	animation: arrowSwitcherTransitionOut .4s;
 	transform: scaleX(1);
 	
 }
@@ -323,6 +325,105 @@ h2.caption span.F:active {
 	from {transform: scaleX(-1);}
 	to {transform: scaleX(1);}
 }
+
+
+.portfolioSection {
+	margin-top: -5%;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: .3s;
+}
+.portfolioSection_active {
+	opacity: 1;
+}
+.switches {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.switches li {
+	position: relative;
+	color: #fff;
+	opacity: .4;
+	font-family: "Open Sans";
+	font-size: 24px;
+	font-weight: 300;
+	cursor: pointer;
+	letter-spacing: 3.5px;
+
+	margin-right: 70px;
+	transition: .3s;
+}
+.switches li:hover {
+	opacity: .7;
+}
+.switches li:active {
+	opacity: 1;
+}
+.switches li:last-child {
+	margin-right: 0;
+}
+
+.underline:before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    background: #fff;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+.underline:hover:before {
+    width: 110%;
+    left: -7%;
+}
+.underline:active:before {
+    width: 140%;
+    left: -22.5%;
+}
+.liActive:before {
+    width: 110%;
+    left: -7%;
+}
+
+.sitesSection {
+	margin-top: 70px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.siteItem {
+	position: relative;
+	padding: 3%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 85%;
+	overflow: hidden;
+}
+.siteItem img {
+	width: 65%;
+	box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.4), inset 0 0 43px rgba(255, 255, 255, 0.04);
+}
+.siteItem span {
+	position: absolute;
+	bottom: 15%;
+	left: 23%;
+	opacity: 0.6;
+	color: #ffffff;
+	font-family: "Open Sans";
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: 0.8px;
+}
+
+
 
 
 
