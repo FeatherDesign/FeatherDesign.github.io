@@ -173,4 +173,8 @@ $('.switches li.arts').click(function(){
 	$('.sitesSection').removeClass('sitesSection_active');
 });
 
+// function siteImgHover() {
+// 	$('.siteItem img').toggleClass('siteImg_active');
+// }
+
 
