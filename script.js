@@ -162,15 +162,19 @@ $('.switches li.sites').click(function(){
 	} else {
 		$('.sites').removeClass('liActive');
 	}
-	$('.sitesSection').toggleClass('sitesSection_active');
-	$('.artsSection').removeClass('artsSection_active');
+	if (!$('.sitesSection').hasClass('sitesSection_active')) {
+		$('.sitesSection').toggleClass('sitesSection_active');
+		$('.artsSection').removeClass('artsSection_active');
+	}
 });
 $('.switches li.arts').click(function(){
 	if ($('.switches .arts').hasClass('liActive')) {
 		$('.sites').removeClass('liActive');
 	}
-	$('.artsSection').toggleClass('artsSection_active');
-	$('.sitesSection').removeClass('sitesSection_active');
+	if (!$('.artsSection').hasClass('artsSection_active')) {
+		$('.artsSection').toggleClass('artsSection_active');
+		$('.sitesSection').removeClass('sitesSection_active');
+	}	
 });
 
 // function siteImgHover() {

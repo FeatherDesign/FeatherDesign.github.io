@@ -211,6 +211,32 @@ h2.caption span.F:active {
 	/*text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);*/
 }
 
+
+
+
+
+
+
+.arrowSwitcher_active {
+	animation: arrowSwitcherTransition .4s;
+	transform: scaleX(-1);
+	
+}
+@keyframes arrowSwitcherTransition {
+	from {transform: scaleX(1);}
+	to {transform: scaleX(-1);}
+}
+.arrowSwitcher_activeOut {
+	animation: arrowSwitcherTransitionOut .4s;
+	transform: scaleX(1);
+	
+}
+@keyframes arrowSwitcherTransitionOut {
+	from {transform: scaleX(-1);}
+	to {transform: scaleX(1);}
+}
+
+
 .leftContent_active {
 	width: 100%;
 	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
@@ -340,27 +366,8 @@ h2.caption span.F:active {
 	to {padding-top: 7em;}
 }
 
-.arrowSwitcher_active {
-	animation: arrowSwitcherTransition .4s;
-	transform: scaleX(-1);
-	
-}
-@keyframes arrowSwitcherTransition {
-	from {transform: scaleX(1);}
-	to {transform: scaleX(-1);}
-}
-.arrowSwitcher_activeOut {
-	animation: arrowSwitcherTransitionOut .4s;
-	transform: scaleX(1);
-	
-}
-@keyframes arrowSwitcherTransitionOut {
-	from {transform: scaleX(-1);}
-	to {transform: scaleX(1);}
-}
 
-
-.portfolioSection_active .siteItem,
+.sitesSection_active .siteItem,
 .portfolioSection_active .switches li  {
 	cursor: pointer;
 }
@@ -470,13 +477,18 @@ h2.caption span.F:active {
 	z-index: 3;
 	position: absolute;
 	bottom: 7%;
-	left: 7%;
+	left: 5%;
 	opacity: 0;
 	color: #ffffff;
 	font-family: "Open Sans";
 	font-size: 1.5em;
 	font-weight: 300;
 	letter-spacing: 0.8px;
+}
+.siteItem span i {
+	font-style: normal;
+	font-size: .65em;
+	letter-spacing: 1.7px;
 }
 .siteItem:hover {
 	transform: scale(1.07);
@@ -508,6 +520,16 @@ h2.caption span.F:active {
 
 
 
+@media screen and (min-width: 1100px) and (max-width: 1550px) {
+	.portfolioSection {
+		margin-top: -7%;
+	}
+}
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+	.portfolioSection {
+		margin-top: -9%;
+	}
+}
 
 
 
