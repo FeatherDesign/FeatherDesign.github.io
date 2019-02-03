@@ -124,6 +124,8 @@ $('.arrowSwitcher').click(function(){
 		$('.portfolioSection').removeClass('portfolioSection_active');
 		$('.portfolioSection').toggleClass('portfolioSection_activeOut');
 
+		$('.siteItem').removeClass('pointer');
+
 	} else {
 		$('#rightContent').toggleClass('rightContent_active');
 		$('#rightContent').removeClass('rightContent_activeOut');
@@ -148,6 +150,8 @@ $('.arrowSwitcher').click(function(){
 
 		$('.portfolioSection').toggleClass('portfolioSection_active');
 		$('.portfolioSection').removeClass('portfolioSection_activeOut');
+
+		$('.siteItem').toggleClass('pointer');
 	}
 });
 
@@ -164,6 +168,7 @@ $('.switches li.sites').click(function(){
 	}
 	if (!$('.sitesSection').hasClass('sitesSection_active')) {
 		$('.sitesSection').toggleClass('sitesSection_active');
+		$('.siteItem').toggleClass('pointer');
 		$('.artsSection').removeClass('artsSection_active');
 	}
 });
@@ -174,6 +179,7 @@ $('.switches li.arts').click(function(){
 	if (!$('.artsSection').hasClass('artsSection_active')) {
 		$('.artsSection').toggleClass('artsSection_active');
 		$('.sitesSection').removeClass('sitesSection_active');
+		$('.siteItem').removeClass('pointer');
 	}	
 });
 
