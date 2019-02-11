@@ -533,11 +533,11 @@ h2.caption span.F:active {
 	flex-direction: row-reverse;
 }
 .artItem:nth-child(2n) .image {
-	justify-content: right;
 	margin-right: 0;
 	margin-left: 35px;
 }
 .artItem .image {
+	min-width: 400px;
 	margin-right: 35px;
 	position: relative;
 	display: flex;
