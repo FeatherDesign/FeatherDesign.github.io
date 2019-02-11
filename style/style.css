@@ -526,7 +526,7 @@ h2.caption span.F:active {
 	padding: 0 20px;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+/*	justify-content: center;*/
 	margin-bottom: 50px;
 }
 .artItem:nth-child(2n) {
@@ -534,8 +534,11 @@ h2.caption span.F:active {
 }
 .artItem:nth-child(2n) .image {
 	justify-content: right;
+	margin-right: 0;
+	margin-left: 35px;
 }
 .artItem .image {
+	margin-right: 35px;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -553,11 +556,8 @@ h2.caption span.F:active {
 .artItem .textArt { 
 	display: flex;
 	flex-direction: column;
-	margin-left: 35px;
-}
-.artItem:nth-child(2n) .textArt {
-	margin-left: 0;
-	margin-right: 35px;
+	margin-right: auto;
+    margin-left: auto;
 }
 .artItem .textArt .captionArt {
 	color: #ffffff;
