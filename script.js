@@ -188,3 +188,13 @@ $('.switches li.arts').click(function(){
 // }
 
 
+
+// function sss () {
+// 	var offset = 0;
+// 	$('html, body').animate ({
+// 	  scrollTop: $(#more).offset ().top - offset
+// 	}, 500);
+// 	return false;
+// }
+
+

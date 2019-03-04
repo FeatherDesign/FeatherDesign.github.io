@@ -272,8 +272,9 @@ h2.caption span.F:active {
 	opacity: 0;
 }
 @keyframes  featherTransition {
-	from { transform: translateX(0); opacity: 1;}
-	to { transform: translateX(70%); opacity: 0;}
+	0% { transform: translateX(0); opacity: 1;}
+	99% { transform: translateX(70%); opacity: 0;}
+	100% {display: none;}
 }
 .feather-item_activeOut,
 .feather-shadow_activeOut,
@@ -366,11 +367,38 @@ h2.caption span.F:active {
 	flex-direction: column;
 	align-items: center;
 	transition: .3s;
+	overflow: auto;
 }
 .portfolioSection_active {
 	opacity: 1;
 	width: 100%;
+	animation: portfolioSection .3s;
+	display: flex;
 }
+@keyframes portfolioSection {
+	0% {display: none; opacity: 0;}
+	1% {display: flex; opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes portfolioSection_activeOut {
+	0% {
+    display: block;
+    opacity: 1;
+	}
+	99% {
+	display: block;
+	}
+	100% {
+	display: none;
+	opacity: 0;
+	}
+}
+.portfolioSection_activeOut {
+	display: none;
+	animation: portfolioSection_activeOut .3s;
+	
+}
+
 .switches {
 	display: flex;
 	justify-content: center;
@@ -506,7 +534,6 @@ h2.caption span.F:active {
 }
 
 .artsSection {
-	overflow: hidden;
 	transform: translateX(7%);
 	transition: .3s;
 	opacity: 0;
@@ -523,11 +550,17 @@ h2.caption span.F:active {
 	z-index: 5;
 }
 .artItem {
-	padding: 0 20px;
+	padding: 20px;
 	display: flex;
 	flex-direction: row;
 /*	justify-content: center;*/
 	margin-bottom: 50px;
+	position: relative;
+	transition: .2s;
+}
+.artItem:hover {
+	background-color: rgba(255,255,255,.08);
+
 }
 .artItem:nth-child(2n) {
 	flex-direction: row-reverse;
@@ -542,16 +575,27 @@ h2.caption span.F:active {
 	position: relative;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 55%;
     height: 300px;
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
     box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.4);
+    transition: .2s;
 }
 .artItem .image img {
 	position: absolute;
 	height: 110%;
+	transition: .3s;
+	cursor: pointer;
+}
+.artItem .image img:hover {
+	transform: scale(1.1);
+}
+.artItem .image:active {
+	transform: scale(.95);
+
 }
 .artItem .textArt { 
 	display: flex;
@@ -571,17 +615,38 @@ h2.caption span.F:active {
 	margin-bottom: 25px;
 	display: flex; 
 	justify-content: center;
-	opacity: .9;
 	position: relative;
 }
-.captionArt:after {
+.captionArt h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	position: relative;
+	cursor: pointer;
+	opacity: .8;
+	transition: .2s;
+}
+.captionArt h3:after {
 	content: '';
 	height: 2px;
-	width: 100%;
-	color: #fff;
+	width: 110%;
+	background-color: #fff;
 	position: absolute;
-	bottom: 0;
+	bottom: -5px;
+	left: -5%;
 	z-index: 2;
+	transition: .2s;
+}
+.captionArt h3:hover:after {
+	width: 50%;
+	left: 25%;
+}
+.captionArt h3:active:after {
+	width: 65%;
+	left: 17.5%;
+}
+.captionArt h3:active {
+	opacity: 1;
 }
 .artItem .textArt .hashtagsArt {
 	display: inline-block;
@@ -596,6 +661,23 @@ h2.caption span.F:active {
 	font-style: normal;
 	margin-right: 5px;
 	opacity: .6;
+	cursor: pointer;
+	position: relative;
+}
+.artItem .textArt .hashtagsArt i:after {
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	bottom: 0;
+	transition: .2s;
+}
+.artItem .textArt .hashtagsArt i:hover:after {
+	opacity: 1;
+	bottom: -2px;
 }
 .artItem:nth-child(2n) .hashtagsArt {
 	align-items: left;
@@ -638,7 +720,7 @@ h2.caption span.F:active {
 	}
 	#rightContent {
 		width: 100vw;
-		height: 70vh;
+		height: 60vh;
 
 		background-image: url(../Materials/bg-white-phone-version.jpg);
 		background-repeat: no-repeat;
@@ -647,7 +729,7 @@ h2.caption span.F:active {
 		background-size: cover;
 	}
 	#leftContent {
-		margin-top: -8vh;
+		margin-top: -10vh;
 		width: 100vw;
 		height: 50vh;
 		clip-path: polygon(0 15%, 0 100%, 100% 100%, 100% 0%);
@@ -661,6 +743,10 @@ h2.caption span.F:active {
 	}
 	h2.caption span.F:active {
 	opacity: 1;
+	}
+
+	.switcherImg {
+		display: none;
 	}
 }
 
